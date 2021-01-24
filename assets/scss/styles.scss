@@ -35,6 +35,85 @@ $white: #ffffff;
   justify-content: space-between;
   align-items: center;
 }
+.list-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &_item {
+    position: relative;
+    margin: 16px 0 16px 36px;
+    color: $blue_01;
+    opacity: 0.6;
+    &_phone::before,
+    &_email::before,
+    &_site::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: -36px;
+      margin-top: -8px;
+      @include background-img(center, center, no-repeat, contain);
+    }
+    &_phone::before {
+      background-image: url("../../assets/img/phone.png");
+    }
+    &_email::before {
+      background-image: url("../../assets/img/mail.png");
+    }
+    &_site::before {
+      background-image: url("../../assets/img/web.png");
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Gilroy";
+  padding: 56px;
+  background: $white;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+
+  &_title {
+    margin: 0 0 68px 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: $blue_01;
+  }
+  &_group-field {
+    & > label {
+      font-family: "Gilroy";
+      font-size: 16px;
+      line-height: 30px;
+      color: $blue_01;
+      opacity: 0.8;
+    }
+    & > input,
+    & > textarea {
+      width: 100%;
+      margin: 8px 0 0 0;
+      padding: 21px 0 21px 40px;
+      opacity: 0.4;
+      border: 1px solid $blue_03;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    & > input::placeholder,
+    & > textarea::placeholder {
+      font-family: "Gilroy";
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      color: $blue_01;
+      opacity: 0.7;
+    }
+  }
+}
 
 .burger-menu {
   display: flex;
@@ -405,5 +484,84 @@ $white: #ffffff;
   }
 }
 /*----------  ----------*/
+
+/*---------- contact us ----------*/
+.wrapper_contact-us-description {
+  background-image: url("../../assets/img/bg-cnt-us.png");
+  @include background-img(center, center, no-repeat, cover);
+}
+
+.contact-us-description {
+  margin: 60px 0;
+  padding: 45px 0;
+  font-family: "Gilroy";
+  color: $white;
+  text-align: center;
+  &_title {
+    font-size: 44px;
+    line-height: 74px;
+  }
+  &_text {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.contact-us-main {
+  &_map {
+    grid-area: 4 / content;
+  }
+  .contact-form {
+    grid-area: content/4;
+    &__btn {
+      width: 100%;
+      margin: 40px 0 0;
+    }
+  }
+  &_info {
+    font-family: "Gilroy";
+    font-size: 16px;
+    grid-area: content/3;
+    &_img {
+      display: block;
+      width: 300px;
+      height: 181px;
+      margin: 60px 0 0;
+      background-image: url("../../assets/img/img-1.png");
+      @include background-img(center, center, no-repeat, contain);
+    }
+    &_group {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 60%;
+      margin: 20px 0;
+      color: $blue_01;
+      &_title {
+        margin: 0 0 24px 0;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+      }
+      &_text {
+        line-height: 26px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+/*----------  ----------*/
+
+.map {
+  max-width: 940px;
+  height: 480px;
+  margin: 96px auto;
+  grid-area: content;
+  background-image: url("../../assets/img/map-img.jpg");
+  @include background-img(center, center, no-repeat, contain);
+}
 
 @import "__media.scss";

@@ -48,6 +48,17 @@ $white: #ffffff;
       }
     }
   }
+  .contact-us-main {
+    &_map {
+      grid-area: 4 / content;
+    }
+    .contact-form {
+      grid-area: content/2;
+    }
+    &_info {
+      grid-area: content/1;
+    }
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -64,6 +75,29 @@ $white: #ffffff;
     margin: 20px 0;
   }
 
+  .contact-us-main {
+    &_map {
+      grid-area: 4 / content;
+    }
+    .contact-form {
+      grid-area: 1/1;
+    }
+    &_info {
+      grid-area: 2/1;
+      &_group {
+        width: 90%;
+        margin: 20px auto;
+      }
+      &_img {
+        margin: 30px auto;
+      }
+    }
+  }
+
+  .map {
+    height: 280px;
+    margin: 46px auto;
+  }
   .interested {
     &_description {
       flex-direction: column;
