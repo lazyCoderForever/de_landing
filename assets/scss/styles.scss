@@ -1,0 +1,409 @@
+@import "reset.scss";
+@import "__fonts.scss";
+
+@mixin background-img($posX, $posY, $rep, $size) {
+  background-position: $posX $posY;
+  background-repeat: $rep;
+  background-size: $size;
+}
+
+/*---------- variables----------*/
+$blue_01: #1f3f68;
+$blue_02: #316099;
+$blue_03: #356ead;
+$blue_04: #5a98d0;
+$white: #ffffff;
+/*---------- ----------*/
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.body {
+  font-family: "Gilroy";
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(auto-fit, minmax(200px, 1fr)) 120px;
+  grid-template-areas: ". content content .";
+  grid-auto-flow: column;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 32px;
+  height: 32px;
+  padding: 8px 4px;
+  cursor: pointer;
+
+  &_line {
+    width: 100%;
+    height: 4px;
+    background-color: $blue_03;
+  }
+}
+.line {
+  display: block;
+  width: 81%;
+  height: 0px;
+  opacity: 0.4;
+  border: 1px solid $white;
+}
+
+.btn {
+  display: block;
+  width: 220px;
+  padding: 15px 48px;
+  font-family: Gilroy;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $white;
+  background: $blue_04;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*---------- main screen ----------*/
+
+.wrapper_main-screen {
+  background: linear-gradient(
+    0deg,
+    #98c3e8 -15%,
+    rgba(152, 195, 232, 0) 31.12%
+  );
+}
+.main-screen {
+  background-image: url("../../assets/img/illustration.png");
+  @include background-img(right, bottom, no-repeat, 58%);
+  min-height: 768px;
+  &__navigation {
+    margin-top: 47px;
+  }
+}
+.new-automation {
+  margin: 110px auto;
+
+  &_info {
+    max-width: 510px;
+    grid-area: content;
+    &_title {
+      font-family: "Galien";
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 74px;
+      letter-spacing: 0.04em;
+      color: $blue_01;
+    }
+    &_text {
+      max-width: 425px;
+      margin: 30px 0;
+      font-family: Gilroy;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $blue_01;
+      opacity: 0.6;
+    }
+    &-btn {
+      margin: 39px 0;
+    }
+  }
+}
+
+/*----------  ----------*/
+
+/*---------- our_help ----------*/
+.wrapper_our-help {
+  background-color: $white;
+}
+.our-help {
+  margin: 92px 0;
+  &_title {
+    font-family: "Gilroy";
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: $blue_02;
+  }
+  &_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: content;
+    &_item {
+      width: 284px;
+      height: 488px;
+      padding: 48px;
+      margin: 100px 0 0 56px;
+      background: $white;
+      box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+      border-radius: 10px;
+      &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: "Gilroy";
+        &_title {
+          margin: 56px 0 0;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.05em;
+          font-weight: 600;
+          color: $blue_01;
+        }
+        &_description {
+          margin: 16px 0 0;
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: 0.05em;
+          color: $blue_01;
+          opacity: 0.6;
+        }
+        &_link {
+          position: relative;
+          width: 79px;
+          height: 30px;
+          margin: 32px 0 0;
+          font-family: "Gilroy";
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 30px;
+          color: $blue_04;
+          text-decoration: none;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            transform: translateX(28px);
+            background-image: url("../../assets/img/arrow.jpg");
+            @include background-img(center, center, no-repeat, contain);
+          }
+        }
+        &_img {
+          display: block;
+          margin: 0 auto;
+          width: 224px;
+          height: 197px;
+          &-1 {
+            background-image: url("../../assets/img/3.png");
+            @include background-img(center, center, no-repeat, contain);
+          }
+          &-2 {
+            background-image: url("../../assets/img/1.png");
+            @include background-img(center, center, no-repeat, contain);
+          }
+          &-3 {
+            background-image: url("../../assets/img/2.png");
+            @include background-img(center, center, no-repeat, contain);
+          }
+        }
+      }
+    }
+    &_item:first-child {
+      width: 360px;
+      height: 138px;
+      margin: 100px 0 0 0;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    &_item:nth-child(3) {
+      transform: translate(10%, -63%);
+    }
+  }
+}
+/*----------  ----------*/
+
+/*---------- our_clients ----------*/
+.wrappep_our-clients {
+  background: $blue_04;
+  border-radius: 200px 0px 0px 0px;
+}
+.our-clients {
+  font-family: "Gilroy";
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    grid-area: 4 / content;
+    &_item {
+      border-left: 1px solid $white;
+      &_client {
+        display: block;
+        width: 144px;
+        padding: 46px;
+        color: $white;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+    &_item:nth-child(-n + 4) {
+      border-bottom: 1px solid $white;
+    }
+    &_item:first-child {
+      border-left: none;
+    }
+    &_item:last-child {
+      background: rgba(31, 63, 104, 0.2);
+    }
+    &_item:nth-child(5) {
+      border-left: none;
+    }
+  }
+
+  &_description {
+    display: flex;
+    margin: 96px 0;
+    grid-area: content;
+    &_title {
+      max-width: 223px;
+      font-size: 36px;
+      line-height: 46px;
+      color: $white;
+      font-weight: 600;
+    }
+    &_info {
+      max-width: 540px;
+      margin: 0 96px;
+      font-size: 16px;
+      line-height: 26px;
+      color: $white;
+      opacity: 0.6;
+    }
+  }
+}
+/*----------  ----------*/
+
+.wrappep_interested {
+  width: 95%;
+  margin-top: 125px;
+  background: #316099;
+  border-radius: 0px 200px 0px 0px;
+}
+.interested {
+  &_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 91px 0 0;
+    font-family: "Gilroy";
+    grid-area: content;
+    &__btn {
+      width: 124px;
+    }
+    &_info {
+      max-width: 460px;
+      &_title {
+        max-width: 317px;
+        font-size: 36px;
+        line-height: 46px;
+        color: $white;
+      }
+      &_text {
+        margin: 32px 0;
+        font-size: 16px;
+        line-height: 26px;
+        color: $white;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+/*---------- footer ----------*/
+.wrapper_footer {
+  margin-top: 97px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  grid-area: content;
+}
+.contact-info {
+  max-width: 327px;
+  margin: 0 auto 0 0;
+  font-family: "Gilroy";
+  &_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: $white;
+    &_item {
+      margin: 12px 0;
+      font-size: 16px;
+      line-height: 26px;
+      & > span {
+        margin: 0 0 0 16px;
+        opacity: 0.8;
+      }
+    }
+    &_item:last-child {
+      margin: 64px 0 0 0;
+      opacity: 0.5;
+    }
+  }
+  &_company {
+    margin: 16px 0;
+    &_logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-decoration: none;
+      & > span {
+        margin: 0 0 0 15px;
+        font-size: 28px;
+        line-height: 46px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.site-map {
+  display: flex;
+  font-family: "Gilroy";
+  &_about-us,
+  &_follow-us {
+    margin: 0 77px;
+  }
+  & &_title {
+    padding: 16px 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+  }
+  &_list {
+    &_item {
+      margin: 16px 0;
+      & > a {
+        font-size: 16px;
+        line-height: 26px;
+        color: $white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+/*----------  ----------*/
+
+@import "__media.scss";
