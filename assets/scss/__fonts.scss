@@ -1,24 +1,22 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Regular.eot");
-  src: local("Gilroy Regular"), local("Gilroy-Regular"),
-    url("../../assets/fonts/ Gilroy-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../assets/fonts/Gilroy-Regular.woff2") format("woff2"),
-    url("../../assets/fonts/Gilroy-Regular.woff") format("woff"),
-    url("../../assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  src: url("../fonts/Galien-Regular.eot");
+  src: local("Gilroy-Regular"), local("Gilroy-Regular"),
+    url("/assets/fonts/Gilroy-Regular.eot") format("embedded-opentype"),
+    url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy-Regular.woff") format("woff"),
+    url("../fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Galien";
-  src: url("Galien-Regular.eot");
+  src: url("../fonts/Galien-Regular.eot");
   src: local("Galien-Regular"), local("Galien-Regular"),
-    url("../../assets/fonts/Galien-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../../assets/fonts/Galien-Regular.woff") format("woff"),
-    url("../../assets/fonts/Galien-Regular.ttf") format("truetype");
+    url("../fonts/Galien-Regular.eot") format("embedded-opentype"),
+    url("../fonts/Galien-Regular.woff") format("woff"),
+    url("../fonts/Galien-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

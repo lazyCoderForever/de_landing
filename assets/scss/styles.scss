@@ -30,6 +30,20 @@ $white: #ffffff;
   grid-auto-flow: column;
 }
 
+.logo {
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/logo.jpg");
+  @include background-img(center, center, no-repeat, contain);
+}
+
+.contact-info_company_logo {
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/logo-f.png");
+  @include background-img(center, center, no-repeat, contain);
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -57,13 +71,13 @@ $white: #ffffff;
       @include background-img(center, center, no-repeat, contain);
     }
     &_phone::before {
-      background-image: url("../../assets/img/phone.png");
+      background-image: url("../img/phone.png");
     }
     &_email::before {
-      background-image: url("../../assets/img/mail.png");
+      background-image: url("../img/mail.png");
     }
     &_site::before {
-      background-image: url("../../assets/img/web.png");
+      background-image: url("../img/web.png");
     }
   }
 }
@@ -166,7 +180,7 @@ $white: #ffffff;
   );
 }
 .main-screen {
-  background-image: url("../../assets/img/illustration.png");
+  background-image: url("../img/illustration.png");
   @include background-img(right, bottom, no-repeat, 58%);
   min-height: 768px;
   &__navigation {
@@ -272,7 +286,7 @@ $white: #ffffff;
             height: 16px;
             margin-top: -8px;
             transform: translateX(28px);
-            background-image: url("../../assets/img/arrow.jpg");
+            background-image: url("../img/arrow.jpg");
             @include background-img(center, center, no-repeat, contain);
           }
         }
@@ -282,15 +296,15 @@ $white: #ffffff;
           width: 224px;
           height: 197px;
           &-1 {
-            background-image: url("../../assets/img/3.png");
+            background-image: url("../img/3.png");
             @include background-img(center, center, no-repeat, contain);
           }
           &-2 {
-            background-image: url("../../assets/img/1.png");
+            background-image: url("../img/1.png");
             @include background-img(center, center, no-repeat, contain);
           }
           &-3 {
-            background-image: url("../../assets/img/2.png");
+            background-image: url("../img/2.png");
             @include background-img(center, center, no-repeat, contain);
           }
         }
@@ -448,7 +462,7 @@ $white: #ffffff;
       align-items: center;
       text-decoration: none;
       & > span {
-        margin: 0 0 0 15px;
+        margin: 0 0 0 60px;
         font-size: 28px;
         line-height: 46px;
         color: $white;
@@ -487,7 +501,7 @@ $white: #ffffff;
 
 /*---------- contact us ----------*/
 .wrapper_contact-us-description {
-  background-image: url("../../assets/img/bg-cnt-us.png");
+  background-image: url("../img/bg-cnt-us.png");
   @include background-img(center, center, no-repeat, cover);
 }
 
@@ -530,7 +544,7 @@ $white: #ffffff;
       width: 300px;
       height: 181px;
       margin: 60px 0 0;
-      background-image: url("../../assets/img/img-1.png");
+      background-image: url("../img/img-1.png");
       @include background-img(center, center, no-repeat, contain);
     }
     &_group {
@@ -560,7 +574,7 @@ $white: #ffffff;
   height: 480px;
   margin: 96px auto;
   grid-area: content;
-  background-image: url("../../assets/img/map-img.jpg");
+  background-image: url("../img/map-img.jpg");
   @include background-img(center, center, no-repeat, contain);
 }
 
