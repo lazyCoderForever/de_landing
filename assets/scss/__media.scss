@@ -1,225 +1,227 @@
 $white: #ffffff;
 @media screen and (max-width: 1290px) {
-  .our-clients_list_item_client {
-    display: block;
-    width: 144px;
-    padding: 31px;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-  }
+    .our-clients__list__item__client {
+        display: block;
+        width: 144px;
+        padding: 31px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
 }
 
 @media screen and (max-width: 1088px) {
-  .container {
-    margin: 0 15px;
-  }
-  .content-grid {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-template-areas: " content content ";
-  }
+    .container {
+        margin: 0 15px;
+    }
+    .content-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-areas: ' content content ';
+    }
 
-  .our-clients {
-    &_description {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &_title {
-        max-width: max-content;
-      }
-      &_info {
-        margin: 15px auto;
-        text-align: center;
-      }
-    }
-    &_list {
-      &_item {
-        border: none;
-        border-bottom: 1px solid $white;
-        &_client {
-          width: 230px;
+    .our-clients {
+        &__description {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__title {
+                max-width: max-content;
+            }
+            &__info {
+                margin: 15px auto;
+                text-align: center;
+            }
         }
-      }
-      &_item:nth-child(2n) {
-        border-left: 1px solid $white;
-      }
-      &_item:last-child {
-        background: rgba(31, 63, 104, 0.2);
-      }
+        &__list {
+            &__item {
+                border: none;
+                border-bottom: 1px solid $white;
+                &_client {
+                    width: 230px;
+                }
+            }
+            &__item:nth-child(2n) {
+                border-left: 1px solid $white;
+            }
+            &__item:last-child {
+                background: rgba(31, 63, 104, 0.2);
+            }
+        }
     }
-  }
-  .contact-us-main {
-    &_map {
-      grid-area: 4 / content;
+    .contact-us-main {
+        &_map {
+            grid-area: 4 / content;
+        }
+        .contact-form {
+            grid-area: content/2;
+        }
+        &_info {
+            grid-area: content/1;
+        }
     }
-    .contact-form {
-      grid-area: content/2;
-    }
-    &_info {
-      grid-area: content/1;
-    }
-  }
 }
 
 @media screen and (max-width: 996px) {
-  .btn {
-    width: 150px;
-  }
-
-  .content-grid {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-    grid-template-areas: " content ";
-  }
-  .line {
-    width: 99%;
-    margin: 20px 0;
-  }
-
-  .contact-us-main {
-    &_map {
-      grid-area: 4 / content;
+    .btn {
+        padding: 15px 20px;
     }
-    .contact-form {
-      grid-area: 1/1;
-    }
-    &_info {
-      grid-area: 2/1;
-      &_group {
-        width: 90%;
-        margin: 20px auto;
-      }
-      &_img {
-        margin: 30px auto;
-      }
-    }
-  }
-
-  .map {
-    height: 280px;
-    margin: 46px auto;
-  }
-  .interested {
-    &_description {
-      flex-direction: column;
-      &_info {
-        text-align: center;
-        &_title {
-          max-width: max-content;
-        }
-      }
-    }
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .contact-info {
-    max-width: max-content;
-    margin: 0 auto;
-  }
-
-  .main-screen {
-    min-height: 562px;
-    background-image: none;
-  }
-  .new-automation {
-    margin: 40px 0;
-    &_info {
-      max-width: 100%;
-      &_title {
-        font-size: 30px;
-        line-height: 30px;
-        text-align: center;
-      }
-      &_text {
-        max-width: 100%;
-        text-align: center;
-      }
-      &-btn {
-        margin: 20px auto;
-      }
-    }
-  }
-  .our-help {
-    margin: 15px 0;
-    &_title {
-      width: auto;
-      font-size: 25px;
-      text-align: center;
-    }
-    &_list {
-      grid-template-columns: 1fr;
-      &_item {
-        width: auto;
-        max-height: 550px;
-        padding: 48px;
-        margin: 20px auto;
-        &__card {
-          &_link {
+    .card {
+        &__link {
             margin: 15px 0;
-          }
-          &_img {
+        }
+        &__img {
             width: 180px;
             height: 130px;
-          }
         }
-      }
-      &_item:first-child {
-        width: auto;
-        margin: 0 auto;
-      }
-      &_item:nth-child(3) {
-        transform: translate(0);
-      }
     }
-  }
 
-  .wrappep_our-clients {
-    border-radius: 0;
-  }
+    .content-grid {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-template-areas: ' content ';
+    }
+    .line {
+        width: 99%;
+        margin: 20px 0;
+    }
 
-  .our-clients {
-    &_description {
-      margin: 35px 0;
-      &_title {
-        font-size: 30px;
+    .contact-us-main {
+        &_map {
+            grid-area: 4 / content;
+        }
+        .contact-form {
+            grid-area: 1/1;
+        }
+        &_info {
+            grid-area: 2/1;
+            &_group {
+                width: 90%;
+                margin: 20px auto;
+            }
+            &_img {
+                margin: 30px auto;
+            }
+        }
+    }
+
+    .map {
+        height: 280px;
+        margin: 46px auto;
+    }
+    .interested {
+        &__description {
+            flex-direction: column;
+            &__info {
+                text-align: center;
+                &__title {
+                    max-width: max-content;
+                }
+            }
+        }
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .contact-info {
         max-width: max-content;
-      }
-      &_info {
-        margin: 15px auto;
-        text-align: center;
-      }
+        margin: 0 auto;
     }
-    &_list {
-      &_item {
-        width: 100%;
-        margin: auto;
-        border: none;
-        border-bottom: 1px solid $white;
-        &_client {
-          width: 100%;
-          padding: 46px 0;
-          text-align: center;
+
+    .main-screen {
+        min-height: 562px;
+        background-image: none;
+    }
+    .new-automation {
+        margin: 40px 0;
+        &__info {
+            max-width: 100%;
+            &__title {
+                font-size: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+            &__text {
+                max-width: 100%;
+                text-align: center;
+            }
+            &-btn {
+                margin: 20px auto;
+            }
         }
-      }
-      &_item:nth-child(2n) {
-        border-left: none;
-      }
     }
-  }
+    .our-help {
+        margin: 15px 0;
+        &__title {
+            width: auto;
+            font-size: 25px;
+            text-align: center;
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            &__item {
+                width: auto;
+                height: auto;
+                padding: 48px;
+                margin: 20px auto;
+            }
+            &__item:first-child {
+                width: auto;
+                margin: 0 auto;
+            }
+            &__item:nth-child(3) {
+                transform: translate(0);
+            }
+        }
+    }
 
-  .wrappep_interested {
-    width: 100%;
-    border-radius: 0;
-  }
+    .wrapper-our-clients {
+        border-radius: 0;
+    }
 
-  .footer {
-    align-items: stretch;
-  }
-  .site-map_about-us,
-  .site-map_follow-us {
-    margin: 0 auto;
-  }
+    .our-clients {
+        &__description {
+            margin: 35px 0;
+            &__title {
+                font-size: 30px;
+                max-width: max-content;
+            }
+            &__info {
+                margin: 15px auto;
+                text-align: center;
+            }
+        }
+        &__list {
+            &__item {
+                width: 100%;
+                margin: auto;
+                border: none;
+                border-bottom: 1px solid $white;
+                &__client {
+                    width: 100%;
+                    padding: 46px 0;
+                    text-align: center;
+                }
+            }
+            &__item:nth-child(2n) {
+                border-left: none;
+            }
+        }
+    }
+
+    .wrapper-interested {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .site-map {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .site-map_about-us,
+    .site-map_follow-us {
+        margin: 0 auto;
+    }
 }
